@@ -1,0 +1,171 @@
+// ==========================================================================
+// #Site Header
+// ==========================================================================
+
+.site-header {
+	 @include clearfix;
+	 background-color: #2b3636;
+	 &__outer {
+	 	@include container;
+	 }
+	 &__inner {
+	 	//display: table;
+	 }
+	 &__head {
+		background-color: #2b3636;
+	    z-index: 9990;
+    	position: relative;
+ 		margin: 0 -15px;
+		padding: 0 15px;	
+		z-index: 9999;
+		position: relative;
+		@include clearfix;
+	 	@include media-query(medium) {
+			float: left;
+			margin: inherit;
+			padding: inherit;	
+		}
+
+	 }
+
+ 
+
+	 &__logo {
+
+	 }
+
+	 &__logo-img {
+	 	max-width: 50px;
+	 	float: left;
+	 }
+
+	 &__logo-text {
+	 	float: left;
+	 	font-size: 1.7em;
+	 	text-transform: uppercase;
+	 	font-weight: bold;
+	 	line-height: 60px;
+	 	margin-left: 10px;
+	 }
+
+	 &__community {
+	 	@include absolute(top 0 right 0);
+	 }
+
+
+
+	&__hamburger {
+		position: relative;
+	   	padding: 15px;
+	    margin: 15px 0 15px 15px;
+	    background: none;
+	    border: none;
+ 		float: right;
+ 		cursor: pointer;
+		&--bar {
+			&,		
+			&:before,
+			&:after {
+				@include absolute(right);
+				
+			    width: 100%;
+			    height: 3px;
+			    margin-top: -1px;
+
+			    transition: background 300ms 0s ease,transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease;
+
+			    border-radius: 3px;
+			    background-color: #606060;
+			}
+			&:before,
+			&:after {
+			    content: " ";
+			}
+			&:before {
+			    top: -8px;
+			}
+			&:after {
+				bottom: -9px;
+			}
+		}// bar
+
+		&.is-active .site-header__hamburger--bar {
+			& {
+				background: rgba(255, 8, 8, 0);
+			}
+			&:before,
+			&:after {
+			    transition: background 300ms 0s ease,transform 300ms 0.2s ease, top 300ms 0s ease, bottom 300ms 0s ease;
+			}
+			&:before {
+				top: 0;
+				@include transform(rotate(45deg));
+			}
+			&:after {
+				bottom: 0;
+			    @include transform(rotate(-45deg));
+			}
+		}
+
+		@include media-query(medium) {
+			display: none;
+		}
+	}
+
+	&__navigation {
+		width: 100%;
+		margin: 0 -15px;
+		background-color: #2b3636;
+		line-height: 1.9em;
+    	clear: both;
+    	line-height: 2.4em;
+ 		transition: ease-in-out .25s;
+    	@include transform(translateY(-100%));
+    
+    	position: absolute;
+    	display: block;
+ 
+ 
+		@include media-query(medium) {
+ 			float: right;
+ 			border-bottom: none;
+ 			padding: 0;
+  
+ 		 
+ 			@include transform(translateY(0));
+ 			position: relative;
+ 			width: auto;
+ 			margin: inherit;
+  
+			float: right;
+			clear: unset;
+		}
+		&.is-collapsed {
+			@include transform(translateY(0)); 
+		} 
+	}
+
+	&__search {
+		display: none;
+		@include media-query(medium) {
+			float: right;
+	    	padding: 8px 0 8px 12px;
+	    	display: block;
+		}
+	}
+
+	&__search-input {
+		display: none;
+	}
+
+	&__search-icon {
+		float: right;
+		line-height: 2.4em;
+		cursor: pointer;
+		display: none;
+		@include media-query(medium) {
+			display: block;
+		}
+	}
+
+}

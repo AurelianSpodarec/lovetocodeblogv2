@@ -1,0 +1,21 @@
+// ==========================================================================
+// #Layouts Extends
+// ==========================================================================
+
+%container {
+	@include clearfix;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include media-query(small) {
+
+	}
+
+	@include media-query(medium) {
+
+	}
+
+	@include media-query(large) {
+	    max-width: 1190px;
+	}
+}
