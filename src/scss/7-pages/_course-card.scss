@@ -1,0 +1,131 @@
+// ==========================================================================
+// #Excerpt
+// ==========================================================================
+
+.course-card {
+
+	@include clearfix;
+
+	height: 440px;
+	width: span(12);
+
+	margin-right: gutter();
+	margin-bottom: gutter(10);
+
+	float: left;
+	background: white;
+	box-shadow: 0px 1px #d7e1e2;
+    border: 2px solid #d7e1e2;
+
+    padding: 0px;
+    border-radius: 9px;
+    cursor: pointer;
+    position: relative;
+    @include transition(all 0.2s ease-in-out);
+    &:hover {
+		box-shadow: 0px 0px 0px 1px #f2d5b0;
+    	border: 2px solid #f2d5b0;
+    }
+    &:hover .course-card__title {
+    	color: #ff7940;
+    }
+
+	@include media-query(medium) {
+		width: span(6);
+		&:nth-child(2n) {
+			width: span(6);
+			margin-right: 0;
+		}
+	}
+	@include media-query(large) {
+		width: span(4);
+		&:nth-child(2n) {
+			 width: span(4);
+			 margin-right: gutter();
+		}
+		&:nth-child(3n) {
+			 width: span(4);
+			 margin-right: 0;
+		}
+	}
+
+	&__image-container {
+		overflow: hidden;
+    	max-height: 208px;
+	}
+	&__image {
+	    display: block;
+	    margin: auto;
+	    border-top-left-radius: 9px;
+	    border-top-right-radius: 9px;
+	    border-bottom: 1px solid #EDEDED;
+	    width: 100%;
+	}
+
+	&__body {
+		padding: 20px;
+	}
+	&__section {
+
+	}
+	&__title {
+	    color: #2b3636;
+	    line-height: 25px;
+	    padding: 16px 0 4px 0;
+	    font-weight: bold;
+	    font-size: 18px;
+	    max-height: 70px;
+	    overflow: hidden;
+	    @include transition(all 0.2s ease-in-out);
+	}
+	&__excerpt {
+	   color: #586f6f;
+	    padding: 5px 0;
+	    font-weight: 200;
+	    font-size: 14px;
+	    max-height: 65px;
+	    overflow: hidden;
+	}
+	&__footer {
+	@include clearfix;
+    padding: 20px;
+    bottom: 0;
+  	width: 100%;
+    position: absolute;
+	}
+	&__author-wrap {
+		float: left;
+	}
+	&__author-image {
+		float: left;
+	    width: 30px;
+	    height: 30px;
+	}
+	&__author-name {
+	    max-height: 30px;
+	    line-height: 30px;
+	    font-weight: 200;
+	    font-size: 15px;
+	    text-overflow: ellipsis;
+	    float: left;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    margin-left: 5px;
+	    color: grey;
+	}
+	&__price {
+		float: right;
+		color: #f79b2c;
+	    font-size: 15px;
+	    font-weight: bold;
+	    line-height: 19px;
+	    max-width: 120px;
+	    padding-top: 5px;
+	    text-align: right;
+	}
+
+}
+
+
+
+

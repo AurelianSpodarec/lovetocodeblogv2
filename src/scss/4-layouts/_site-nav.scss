@@ -3,52 +3,23 @@
 // ==========================================================================
 
 .site-nav {
-	text-align: center;
-	@include media-query(medium) {
-	   float: left;
-	   text-align: unset;
-	}
-	&__navigation {
-		float: left;
-		width: 100%;
-		@include media-query(medium) {
-			width: auto;
-		}
-	}
+	@extend %nav-block;
 	&__list {
-		@include clearfix;
+		@extend %nav-list;
 	}
-
 	&__item {
-
-		@include media-query(medium) {
-			float: left;
-		}
+		@extend %nav-item;
 	}
-
 	&__link {
-	    transition: ease-in-out .1s;
-		display: block;
-		padding: 8px 12px;
-		text-transform: uppercase;
-		font-size: .9em;
-		color: #bfbfbf;
-		border-top: 2px solid transparent;
+		@extend %nav-link;
 		&:hover {
-			background-color: rgba(82, 74, 70, 0.58);
-			color: white;
-			border-color: orange;
+			@extend %nav-link--hover;
 		}
 		&--active {
-			font-size: .9em;
-			text-transform: uppercase;
-		    padding: 8px 12px;	 
-			display: block;
-			background-color: rgba(82, 74, 70, 0.58); 
-    		border-top: 2px solid orange;
-    		color: white;
+			@extend %nav-link;
+			@extend %nav-link-active;
     		&:hover {
-    			color: white;
+    			@extend %nav-link-active--hover;
     		}
 		}
 	}

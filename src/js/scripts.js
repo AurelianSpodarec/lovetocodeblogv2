@@ -1,6 +1,6 @@
  
 	var burgerToggle = document.querySelector(".site-header__hamburger");
-	var navToggle = document.querySelector(".site-header__navigation");
+	var navToggle = document.querySelector(".site-header__navigation-wrap");
 
 	burgerToggle.addEventListener('click', function() {
 

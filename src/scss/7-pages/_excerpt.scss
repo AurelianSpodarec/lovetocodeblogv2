@@ -2,59 +2,9 @@
 // #Excerpt
 // ==========================================================================
 
-.page-wrap {
-	@include container;
-}
-.main-slider {
-    height: 425px;
-    overflow: hidden;
-    margin: 50px 0;
-}
+
 .excerpt {
-	@include clearfix;
-
-	height: 440px;
-	width: span(12);
-
-	margin-right: gutter();
-	margin-bottom: gutter(10);
-
-	float: left;
-	background: white;
-	box-shadow: 0px 1px #d7e1e2;
-    border: 1px solid #d7e1e2;
-
-    padding: 0px;
-    border-radius: 9px;
-    cursor: pointer;
-    position: relative;
-    @include transition(all 0.2s ease-in-out);
-    &:hover {
-		box-shadow: 0px 0px 0px 1px #f2d5b0;
-    	border: 1px solid #f2d5b0;
-    }
-    &:hover .excerpt__title {
-    	color: #ff7940;
-    }
-	&:last-child {
-		margin-right: 0;
-	}
-	@include media-query(medium) {
-		width: span(6);
-		&:nth-child(2n) {
-			width: span(6);
-		}
-	}
-	@include media-query(large) {
-		width: span(4);
-		&:nth-child(2n) {
-			 width: span(4);
-		}
-		&:nth-child(3n) {
-			 width: span(4);
-		}
-	}
- 
+	
 	&__img-wrap {
 		max-height: 170px;
 		overflow: hidden;

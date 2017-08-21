@@ -4,7 +4,14 @@
 
 .site-header {
 	 @include clearfix;
-	 background-color: #2b3636;
+	 background: rgb(37, 37, 37);
+	 position: relative;
+	 z-index: 9999;
+	 &--fixed {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
 	 &__outer {
 	 	@include container;
 	 }
@@ -12,7 +19,7 @@
 	 	//display: table;
 	 }
 	 &__head {
-		background-color: #2b3636;
+		background: rgb(37, 37, 37);
 	    z-index: 9990;
     	position: relative;
  		margin: 0 -15px;
@@ -27,9 +34,7 @@
 		}
 
 	 }
-
  
-
 	 &__logo {
 
 	 }
@@ -41,6 +46,7 @@
 
 	 &__logo-text {
 	 	float: left;
+	 	color: white;
 	 	font-size: 1.7em;
 	 	text-transform: uppercase;
 	 	font-weight: bold;
@@ -112,10 +118,10 @@
 		}
 	}
 
-	&__navigation {
+	&__navigation-wrap {
 		width: 100%;
 		margin: 0 -15px;
-		background-color: #2b3636;
+		background: #292929;
 		line-height: 1.9em;
     	clear: both;
     	line-height: 2.4em;
@@ -124,13 +130,13 @@
     
     	position: absolute;
     	display: block;
- 
+ 	    border-bottom: 6px solid #1b1b1b;
  
 		@include media-query(medium) {
  			float: right;
  			border-bottom: none;
  			padding: 0;
-  
+  			background: rgb(37, 37, 37);
  		 
  			@include transform(translateY(0));
  			position: relative;
@@ -143,6 +149,15 @@
 		&.is-collapsed {
 			@include transform(translateY(0)); 
 		} 
+	}
+	&__navigation {
+	
+		float: left;
+		width: 100%;
+		@include media-query(medium) {
+			width: auto;
+		}
+	
 	}
 
 	&__search {

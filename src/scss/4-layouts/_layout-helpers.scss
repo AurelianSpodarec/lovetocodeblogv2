@@ -11,3 +11,62 @@
 .clearfix {
 	@include clearfix;
 }
+
+
+.brand-color {
+	color: #fb8f49;
+}
+
+.page-wrap {
+	@include container;
+}
+
+.view-page {
+
+}
+.view-directory {
+
+}
+
+.intro-page {
+	height: 300px; 
+	width: 100%; 
+	margin-bottom: 50px; 
+	background-size: cover; 
+	position: relative;
+	&__overlay {
+		background: black; 
+		opacity: 0.7; 
+		position: absolute; 
+		top: 0; 
+		left: 0;
+		right: 0; 
+		bottom: 0; 
+		//width: 100%; 
+		//height: 100%;
+	    background: linear-gradient(135deg, #ffa000 20%, #ff5000 80%);
+	}
+	&__title {
+		position: absolute;
+		top:50%;
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		color: white;
+	    text-transform: uppercase;
+	    text-shadow: 0 0 20px #222222;
+	    font-size: 54px;
+	}
+}
+
+.section--card {
+    padding: 30px 20px 35px;
+    margin-bottom: 32px;
+    background-color: #FFF;
+    border: 1px solid #eaeaea;
+}
+
+.main-slider {
+    height: 425px;
+    overflow: hidden;
+    	
+}
