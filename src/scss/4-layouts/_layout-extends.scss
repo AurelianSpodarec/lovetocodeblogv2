@@ -15,6 +15,25 @@
 	}
 }
 
+%container-narrow {
+	@include clearfix;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include media-query(large) {
+		max-width: 950px;
+	}
+}
+%container-wide {
+	@include clearfix;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include media-query(large) {
+		max-width: 1050px;
+	}
+}
+
 
 /* Navigation Extends
    ======================================================================== */

@@ -4,7 +4,7 @@
 
 .site-header {
 	 @include clearfix;
-	 background: rgb(37, 37, 37);
+	 background: #282828;
 	 position: relative;
 	 z-index: 9999;
 	 &--fixed {
@@ -19,7 +19,7 @@
 	 	//display: table;
 	 }
 	 &__head {
-		background: rgb(37, 37, 37);
+		background: #282828;
 	    z-index: 9990;
     	position: relative;
  		margin: 0 -15px;
@@ -136,7 +136,7 @@
  			float: right;
  			border-bottom: none;
  			padding: 0;
-  			background: rgb(37, 37, 37);
+  			background: #282828;
  		 
  			@include transform(translateY(0));
  			position: relative;

@@ -1,0 +1,40 @@
+// ==========================================================================
+// #Product Card
+// ==========================================================================
+
+.products-card {
+	@include clearfix;
+	width: span(12);
+    display: table;
+    margin-bottom: gutter(10);
+	&__text {
+		display: table-cell;
+    	vertical-align: top;
+	}
+
+	&__number {
+		display: table-cell;
+		vertical-align: top;
+		padding-right: 9px;
+	}
+	&__name {
+
+	}
+
+	&__desc {
+		max-width: 71%;
+	}
+
+	&__btn {
+
+	}
+
+	&__img-wrap {
+		display: table-cell;
+	}
+
+	&__img {
+
+	}
+
+}
