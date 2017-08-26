@@ -26,7 +26,18 @@
 	}
 
 	&__btn {
-
+	    background-color: #535454;
+	    color: #fff;
+	    border-style: none;
+	        font-size: 1rem;
+   padding: 10px 20px;
+    height: 2.8125rem;
+    line-height: 2.8125rem;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   	border-radius: 10px;
 	}
 
 	&__img-wrap {
