@@ -1,0 +1,78 @@
+// ==========================================================================
+// #Resource Card
+// ==========================================================================
+
+
+.resource-card {
+	@include clearfix;
+
+	width: span(12);
+
+	margin-right: gutter();
+	margin-bottom: gutter(10);
+
+	float: left;
+    cursor: pointer;	
+ 	position: relative;
+	@include media-query(medium) {
+		width: span(6);
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+	@include media-query(large) {
+		width: span(4);
+		&:nth-child(2n) {
+			 margin-right: gutter();
+		}
+		&:nth-child(3n) {  
+			 margin-right: gutter();
+			margin-right: 0;
+		}
+	}
+    &:hover .resource-card__img {
+   		opacity: .6;
+	    -webkit-transform: scale(1.25);
+	    -ms-transform: scale(1.25);
+	    transform: scale(1.25);
+    }
+    &__img-wrap {
+    	max-height: 353px;
+	    overflow: hidden;
+	    position: relative;
+	    	min-height: 190px;
+	    max-height: 190px;
+    }
+    &__img {
+    	width: 100%;
+    	height: 100%;
+    	background-size: cover;
+	    background: center center;
+	    -webkit-transition: all .1s ease;
+	    -o-transition: all .1s ease;
+	    transition: all .1s ease;
+
+	    -webkit-transform: scale(1.05);
+	    -ms-transform: scale(1.05);
+	    transform: scale(1.05);
+    }
+    &__caption-wrap {
+    	position: absolute;
+	    bottom: 0;
+	    left: 50%;
+	    background: rgba(0,0,0,.8);
+	    cursor: pointer;
+	    width: 100%;
+	    padding: 20px 3%;
+	    -ms-transform: translateX(-50%);
+	    -webkit-transform: translateX(-50%);
+	    transform: translateX(-50%);
+	    text-align: center;
+    }
+    &__caption-title {
+    	color: #fff;
+	    font-size: 15px;
+	    font-weight: 700;
+	    text-transform: uppercase;
+    }
+}	

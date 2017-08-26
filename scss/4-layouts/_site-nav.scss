@@ -1,0 +1,27 @@
+// ==========================================================================
+// #Site Nav
+// ==========================================================================
+
+.site-nav {
+	@extend %nav-block;
+	&__list {
+		@extend %nav-list;
+	}
+	&__item {
+		@extend %nav-item;
+	}
+	&__link {
+		@extend %nav-link;
+		&:hover {
+			@extend %nav-link--hover;
+		}
+		&--active {
+			@extend %nav-link;
+			@extend %nav-link-active;
+    		&:hover {
+    			@extend %nav-link-active--hover;
+    		}
+		}
+	}
+
+}

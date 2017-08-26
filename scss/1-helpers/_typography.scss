@@ -1,0 +1,66 @@
+// ==========================================================================
+// #Mixins: Typography
+// ==========================================================================
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+$font-family-sans: sans-serif;
+$font-family-lato: 'Lato';
+
+$base-font-family: $font-family-sans, $font-family-lato;
+
+
+
+$font-size: (
+    xl: 32px,
+    l:  20px,
+    m:  16px,
+    s:  12px,
+);
+
+
+
+$base-scale: 1.5;
+
+$base-unit: 'em';
+$base-font-size: 18px;
+
+$base-line-height: $base-scale * $base-font-size;
+ 
+
+// $h1-font-size: 2.7 * $base-font-size;
+// $h2-font-size: 1.25 * $base-font-size;
+// $h3-font-size: 1.15 * $base-font-size;
+
+
+
+
+
+// Font Face
+// -------------
+@mixin font-face($family, $path, $weight: normal, $style: normal) {
+  @font-face {
+      font: {
+        family: $family;
+        style: $style;
+        weight: $weight; 
+      }
+      src: url("/fonts/#{$path}.woff") format("woff"); 
+  } 
+}
+
+// Font Size
+// -------------
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// Text overflow
+// -------------
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

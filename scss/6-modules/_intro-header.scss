@@ -1,0 +1,24 @@
+// ==========================================================================
+// #Intro Header
+// ==========================================================================
+
+.intro-header {
+	background-size: cover;
+	position: relative;
+	padding: 170px 0;
+	&__title {
+		@include absolute(top 50% left 50%);
+		@include transform(translate(-50%, -50%));
+	    text-transform: uppercase;
+	    text-shadow: 0 0 20px #222222;
+	    font-size: 54px;
+	    color: white;
+	    margin: 0;
+	}
+	&__overlay {
+		@include absolute(top 0 right 0 bottom 0 left 0);
+		background: black;
+		opacity: .75;
+	}
+
+} 

@@ -1,0 +1,51 @@
+// ==========================================================================
+// #Product Card
+// ==========================================================================
+
+.products-card {
+	@include clearfix;
+	width: span(12);
+    display: table;
+    margin-bottom: gutter(10);
+	&__text {
+		display: table-cell;
+    	vertical-align: top;
+	}
+
+	&__number {
+		display: table-cell;
+		vertical-align: top;
+		padding-right: 9px;
+	}
+	&__name {
+
+	}
+
+	&__desc {
+		max-width: 71%;
+	}
+
+	&__btn {
+	    background-color: #535454;
+	    color: #fff;
+	    border-style: none;
+	        font-size: 1rem;
+   padding: 10px 20px;
+    height: 2.8125rem;
+    line-height: 2.8125rem;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   	border-radius: 10px;
+	}
+
+	&__img-wrap {
+		display: table-cell;
+	}
+
+	&__img {
+
+	}
+
+}
