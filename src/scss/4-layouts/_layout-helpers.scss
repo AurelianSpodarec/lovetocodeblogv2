@@ -70,6 +70,16 @@
 	    text-shadow: 0 0 20px #222222;
 	    font-size: 54px;
 	}
+		&__desc {
+			position: absolute;
+		top:67%;
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		color: white;
+	    text-transform: uppercase;
+	    text-shadow: 0 0 20px #222222;
+	    font-size: 20px;
+	}
 }
 
 .section--card {

@@ -1,0 +1,71 @@
+// ==========================================================================
+// #Excerpt
+// ==========================================================================
+
+.courses-main {
+	width: span(9);
+	margin-top: gutter();
+	margin-right: gutter();
+	float: left;
+	&__yt {
+		position: relative;
+	    display: block;
+	    min-height: 100%;
+	    height: 488px;
+	    padding: 0;
+ 
+	}
+}
+.c-btn {
+	display: block !important;
+    height: 36px;
+    padding: 0px !important;
+    line-height: 36px !important;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+.courses-aside {
+	width: span(3);
+	float: left;
+	margin-top: gutter();
+	list-style-type: decimal;
+	&__main {
+		background-color: #1a1c1e;
+		padding: 6px 6px;
+		list-style-type:decimal;
+		list-style-position: inside;
+		color: #fff;
+		height: 100%;
+		overflow-y: scroll;
+	}
+	&__item {
+		 
+	  
+	}
+	&__link {  width: 100%;
+		list-style-position: inside;
+	    padding: 5px 10px;
+	    color: #fff;
+	    text-decoration: none;
+        
+        font-size: 15px;
+      
+        &:hover {
+			background-color: #161819;
+        }
+        &--active {
+        	color: #fff;
+        	font-size: 14px;
+        	display: block;
+		    width: 100%;
+		    padding: 5px 10px;
+		    color: #fff;
+		    text-decoration: none;
+			background-color: #2b83c5;
+
+        }
+	}
+}
